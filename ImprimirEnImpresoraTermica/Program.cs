@@ -51,317 +51,208 @@ class ConectorPluginV3
 
     public ConectorPluginV3 CargarImagenLocalEImprimir(string ruta, float tamano, float maximoAncho)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(ruta);
-        argumentos.Add(tamano);
-        argumentos.Add(maximoAncho);
-        this.agregarOperacion(new OperacionPluginV3("CargarImagenLocalEImprimir", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("CargarImagenLocalEImprimir", new List<object> { ruta,tamano,maximoAncho}));
         return this;
     }
 
     public ConectorPluginV3 Corte(float lineas)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(lineas);
-        this.agregarOperacion(new OperacionPluginV3("Corte", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("Corte", new List<object> { lineas }));
         return this;
     }
 
     public ConectorPluginV3 CorteParcial()
     {
-        List<object> argumentos = new List<object>();
-        this.agregarOperacion(new OperacionPluginV3("CorteParcial", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("CorteParcial", new List<object>()));
         return this;
     }
 
     public ConectorPluginV3 DefinirCaracterPersonalizado(string caracterRemplazoComoCadena, string matrizComoCadena)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(caracterRemplazoComoCadena);
-        argumentos.Add(matrizComoCadena);
-        this.agregarOperacion(new OperacionPluginV3("DefinirCaracterPersonalizado", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("DefinirCaracterPersonalizado", new List<object> { caracterRemplazoComoCadena, matrizComoCadena }));
         return this;
     }
 
     public ConectorPluginV3 DescargarImagenDeInternetEImprimir(string urlImagen, float tamano, float maximoAncho)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(urlImagen);
-        argumentos.Add(tamano);
-        argumentos.Add(maximoAncho);
-        this.agregarOperacion(new OperacionPluginV3("DescargarImagenDeInternetEImprimir", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("DescargarImagenDeInternetEImprimir", new List<object> { urlImagen, tamano, maximoAncho }));
         return this;
     }
 
     public ConectorPluginV3 DeshabilitarCaracteresPersonalizados()
     {
-        List<object> argumentos = new List<object>();
-        this.agregarOperacion(new OperacionPluginV3("DeshabilitarCaracteresPersonalizados", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("DeshabilitarCaracteresPersonalizados", new List<object>()));
         return this;
     }
 
     public ConectorPluginV3 DeshabilitarElModoDeCaracteresChinos()
     {
-        List<object> argumentos = new List<object>();
-        this.agregarOperacion(new OperacionPluginV3("DeshabilitarElModoDeCaracteresChinos", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("DeshabilitarElModoDeCaracteresChinos", new List<object>()));
         return this;
     }
 
     public ConectorPluginV3 EscribirTexto(string texto)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(texto);
-        this.agregarOperacion(new OperacionPluginV3("EscribirTexto", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("EscribirTexto", new List<object> { texto }));
         return this;
     }
 
     public ConectorPluginV3 EstablecerAlineacion(float alineacion)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(alineacion);
-        this.agregarOperacion(new OperacionPluginV3("EstablecerAlineacion", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("EstablecerAlineacion", new List<object> { alineacion }));
         return this;
     }
 
     public ConectorPluginV3 EstablecerEnfatizado(bool enfatizado)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(enfatizado);
-        this.agregarOperacion(new OperacionPluginV3("EstablecerEnfatizado", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("EstablecerEnfatizado", new List<object> { enfatizado }));
         return this;
     }
-
     public ConectorPluginV3 EstablecerFuente(float fuente)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(fuente);
-        this.agregarOperacion(new OperacionPluginV3("EstablecerFuente", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("EstablecerFuente", new List<object> { fuente }));
         return this;
     }
 
     public ConectorPluginV3 EstablecerImpresionAlReves(bool alReves)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(alReves);
-        this.agregarOperacion(new OperacionPluginV3("EstablecerImpresionAlReves", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("EstablecerImpresionAlReves", new List<object> { alReves }));
         return this;
     }
+
     public ConectorPluginV3 EstablecerImpresionBlancoYNegroInversa(bool invertir)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(invertir);
-        this.agregarOperacion(new OperacionPluginV3("EstablecerImpresionBlancoYNegroInversa", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("EstablecerImpresionBlancoYNegroInversa", new List<object> { invertir }));
         return this;
     }
 
     public ConectorPluginV3 EstablecerRotacionDe90Grados(bool rotar)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(rotar);
-        this.agregarOperacion(new OperacionPluginV3("EstablecerRotacionDe90Grados", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("EstablecerRotacionDe90Grados", new List<object> { rotar }));
         return this;
     }
 
     public ConectorPluginV3 EstablecerSubrayado(bool subrayado)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(subrayado);
-        this.agregarOperacion(new OperacionPluginV3("EstablecerSubrayado", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("EstablecerSubrayado", new List<object> { subrayado }));
         return this;
     }
 
     public ConectorPluginV3 EstablecerTamanoFuente(float multiplicadorAncho, float multiplicadorAlto)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(multiplicadorAncho);
-        argumentos.Add(multiplicadorAlto);
-        this.agregarOperacion(new OperacionPluginV3("EstablecerTamañoFuente", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("EstablecerTamañoFuente", new List<object> { multiplicadorAncho, multiplicadorAlto }));
         return this;
     }
 
     public ConectorPluginV3 Feed(float lineas)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(lineas);
-        this.agregarOperacion(new OperacionPluginV3("Feed", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("Feed", new List<object> { lineas }));
         return this;
     }
 
     public ConectorPluginV3 HabilitarCaracteresPersonalizados()
     {
-        List<object> argumentos = new List<object>();
-        this.agregarOperacion(new OperacionPluginV3("HabilitarCaracteresPersonalizados", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("HabilitarCaracteresPersonalizados", new List<object>()));
         return this;
     }
 
     public ConectorPluginV3 HabilitarElModoDeCaracteresChinos()
     {
-        List<object> argumentos = new List<object>();
-        this.agregarOperacion(new OperacionPluginV3("HabilitarElModoDeCaracteresChinos", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("HabilitarElModoDeCaracteresChinos", new List<object>()));
         return this;
     }
 
+
     public ConectorPluginV3 ImprimirCodigoDeBarrasCodabar(string contenido, float alto, float ancho, float tamanoImagen)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(contenido);
-        argumentos.Add(alto);
-        argumentos.Add(ancho);
-        argumentos.Add(tamanoImagen);
-        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasCodabar", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasCodabar", new List<object>() { contenido, alto, ancho, tamanoImagen }));
         return this;
     }
 
     public ConectorPluginV3 ImprimirCodigoDeBarrasCode128(string contenido, float alto, float ancho, float tamanoImagen)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(contenido);
-        argumentos.Add(alto);
-        argumentos.Add(ancho);
-        argumentos.Add(tamanoImagen);
-        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasCode128", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasCode128", new List<object>() { contenido, alto, ancho, tamanoImagen }));
         return this;
     }
 
     public ConectorPluginV3 ImprimirCodigoDeBarrasCode39(string contenido, bool incluirSumaDeVerificacion, bool modoAsciiCompleto, float alto, float ancho, float tamanoImagen)
     {
-        var argumentos = new List<object>();
-        argumentos.Add(contenido);
-        argumentos.Add(incluirSumaDeVerificacion);
-        argumentos.Add(modoAsciiCompleto);
-        argumentos.Add(alto);
-        argumentos.Add(ancho);
-        argumentos.Add(tamanoImagen);
-        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasCode39", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasCode39", new List<object>() { contenido, incluirSumaDeVerificacion, modoAsciiCompleto, alto, ancho, tamanoImagen }));
         return this;
     }
 
     public ConectorPluginV3 ImprimirCodigoDeBarrasCode93(string contenido, float alto, float ancho, float tamanoImagen)
     {
-        var argumentos = new List<object>();
-        argumentos.Add(contenido);
-        argumentos.Add(alto);
-        argumentos.Add(ancho);
-        argumentos.Add(tamanoImagen);
-        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasCode93", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasCode93", new List<object>() { contenido, alto, ancho, tamanoImagen }));
         return this;
     }
 
     public ConectorPluginV3 ImprimirCodigoDeBarrasEan(string contenido, float alto, float ancho, float tamanoImagen)
     {
-        var argumentos = new List<object>();
-        argumentos.Add(contenido);
-        argumentos.Add(alto);
-        argumentos.Add(ancho);
-        argumentos.Add(tamanoImagen);
-        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasEan", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasEan", new List<object>() { contenido, alto, ancho, tamanoImagen }));
         return this;
     }
 
     public ConectorPluginV3 ImprimirCodigoDeBarrasEan8(string contenido, float alto, float ancho, float tamanoImagen)
     {
-        var argumentos = new List<object>();
-        argumentos.Add(contenido);
-        argumentos.Add(alto);
-        argumentos.Add(ancho);
-        argumentos.Add(tamanoImagen);
-        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasEan8", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasEan8", new List<object>() { contenido, alto, ancho, tamanoImagen }));
         return this;
     }
 
     public ConectorPluginV3 ImprimirCodigoDeBarrasPdf417(string contenido, float nivelSeguridad, float alto, float ancho, float tamanoImagen)
     {
-        var argumentos = new List<object>();
-        argumentos.Add(contenido);
-        argumentos.Add(nivelSeguridad);
-        argumentos.Add(alto);
-        argumentos.Add(ancho);
-        argumentos.Add(tamanoImagen);
-        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasPdf417", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasPdf417", new List<object>() { contenido, nivelSeguridad, alto, ancho, tamanoImagen }));
         return this;
     }
 
     public ConectorPluginV3 ImprimirCodigoDeBarrasTwoOfFiveITF(string contenido, bool intercalado, float alto, float ancho, float tamanoImagen)
     {
-        var argumentos = new List<object>();
-        argumentos.Add(contenido);
-        argumentos.Add(intercalado);
-        argumentos.Add(alto);
-        argumentos.Add(ancho);
-        argumentos.Add(tamanoImagen);
-        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasTwoOfFiveITF", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasTwoOfFiveITF", new List<object>() { contenido, intercalado, alto, ancho, tamanoImagen }));
         return this;
     }
 
     public ConectorPluginV3 ImprimirCodigoDeBarrasUpcA(string contenido, float alto, float ancho, float tamanoImagen)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(contenido);
-        argumentos.Add(alto);
-        argumentos.Add(ancho);
-        argumentos.Add(tamanoImagen);
-        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasUpcA", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasUpcA", new List<object>() { contenido, alto, ancho, tamanoImagen }));
         return this;
     }
 
     public ConectorPluginV3 ImprimirCodigoDeBarrasUpcE(string contenido, float alto, float ancho, float tamanoImagen)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(contenido);
-        argumentos.Add(alto);
-        argumentos.Add(ancho);
-        argumentos.Add(tamanoImagen);
-        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasUpcE", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoDeBarrasUpcE", new List<object> { contenido, alto, ancho, tamanoImagen }));
         return this;
     }
 
     public ConectorPluginV3 ImprimirCodigoQr(string contenido, float anchoMaximo, float nivelRecuperacion, float tamanoImagen)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(contenido);
-        argumentos.Add(anchoMaximo);
-        argumentos.Add(nivelRecuperacion);
-        argumentos.Add(tamanoImagen);
-        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoQr", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("ImprimirCodigoQr", new List<object> { contenido, anchoMaximo, nivelRecuperacion, tamanoImagen }));
         return this;
     }
 
     public ConectorPluginV3 ImprimirImagenEnBase64(string imagenCodificadaEnBase64, float tamano, float maximoAncho)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(imagenCodificadaEnBase64);
-        argumentos.Add(tamano);
-        argumentos.Add(maximoAncho);
-        this.agregarOperacion(new OperacionPluginV3("ImprimirImagenEnBase64", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("ImprimirImagenEnBase64", new List<object> { imagenCodificadaEnBase64, tamano, maximoAncho }));
         return this;
     }
 
     public ConectorPluginV3 Iniciar()
     {
-        List<object> argumentos = new List<object>();
-        this.agregarOperacion(new OperacionPluginV3("Iniciar", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("Iniciar", new List<object>()));
         return this;
     }
 
     public ConectorPluginV3 Pulso(float pin, float tiempoEncendido, float tiempoApagado)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(pin);
-        argumentos.Add(tiempoEncendido);
-        argumentos.Add(tiempoApagado);
-        this.agregarOperacion(new OperacionPluginV3("Pulso", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("Pulso", new List<object> { pin, tiempoEncendido, tiempoApagado }));
         return this;
     }
 
     public ConectorPluginV3 TextoSegunPaginaDeCodigos(float numeroPagina, string pagina, string texto)
     {
-        List<object> argumentos = new List<object>();
-        argumentos.Add(numeroPagina);
-        argumentos.Add(pagina);
-        argumentos.Add(texto);
-        this.agregarOperacion(new OperacionPluginV3("TextoSegunPaginaDeCodigos", argumentos));
+        this.agregarOperacion(new OperacionPluginV3("TextoSegunPaginaDeCodigos", new List<object> { numeroPagina, pagina, texto }));
         return this;
     }
+
     public async Task<bool> imprimirEn(string nombreImpresora)
     {
         ImpresionConNombrePluginV3 impresion = new ImpresionConNombrePluginV3(this.operaciones, nombreImpresora, this.serial);
