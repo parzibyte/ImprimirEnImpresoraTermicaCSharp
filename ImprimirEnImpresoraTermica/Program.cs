@@ -51,7 +51,7 @@ class ConectorPluginV3
 
     public ConectorPluginV3 CargarImagenLocalEImprimir(string ruta, float tamano, float maximoAncho)
     {
-        this.agregarOperacion(new OperacionPluginV3("CargarImagenLocalEImprimir", new List<object> { ruta,tamano,maximoAncho}));
+        this.agregarOperacion(new OperacionPluginV3("CargarImagenLocalEImprimir", new List<object> { ruta, tamano, maximoAncho }));
         return this;
     }
 
