@@ -146,10 +146,6 @@ class ConectorPluginV3
         this.agregarOperacion(new OperacionPluginV3("EstablecerImpresionAlReves", argumentos));
         return this;
     }
-
-
-
-
     public ConectorPluginV3 EstablecerImpresionBlancoYNegroInversa(bool invertir)
     {
         List<object> argumentos = new List<object>();
@@ -372,8 +368,6 @@ class ConectorPluginV3
         var serializado = JsonSerializer.Serialize(impresion);
         try
         {
-
-
             using (HttpClient client = new HttpClient())
             {
                 StringContent content = new StringContent(serializado, Encoding.UTF8, "application/json");
@@ -388,24 +382,19 @@ class ConectorPluginV3
 
             return false;
         }
-
     }
     public static async Task<List<string>> obtenerImpresoras(string url = ConectorPluginV3.URL_PLUGIN_POR_DEFECTO)
     {
         try
         {
-
-
-
             using (var httpClient = new HttpClient())
             {
-                HttpResponseMessage response = await httpClient.GetAsync(url+"/impresoras");
+                HttpResponseMessage response = await httpClient.GetAsync(url + "/impresoras");
                 string responseBody = await response.Content.ReadAsStringAsync();
-                List<string> listOfStrings = JsonSerializer.Deserialize<List<string>>(responseBody);
-                return listOfStrings;
+                List<string> impresoras = JsonSerializer.Deserialize<List<string>>(responseBody);
+                return impresoras;
 
             }
-
         }
         catch (HttpRequestException e)
         {
@@ -452,7 +441,7 @@ class Program
     {
 
         var impresoras = await ConectorPluginV3.obtenerImpresoras();
-        foreach(var impresora in impresoras)
+        foreach (var impresora in impresoras)
         {
             Console.WriteLine($"Tenemos una impresora y es: '{impresora}'");
         }
